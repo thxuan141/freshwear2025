@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>FRESH WEAR - Thời Trang Xanh</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -19,6 +19,8 @@
         }
 
         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
             background: #ffffff;
             color: #333;
         }
@@ -31,7 +33,33 @@
             justify-content: space-between;
             align-items: center;
         }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2e7d32;
+  color: white;
+  padding: 15px 40px;
+}
 
+.menu a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+.product {
+  background: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
         .logo {
             display: flex;
             align-items: center;
@@ -199,6 +227,13 @@
         <a href="khuyenmai.html">Khuyến mãi</a>
         <a href="lienhe.html">Liên hệ</a>
     </nav>
+    <div class="logo">FRESH WEAR</div>
+  <nav class="menu">
+    <a href="#">Trang chủ</a>
+    <a href="#">Sản phẩm</a>
+    <a href="#">Khuyến mãi</a>
+    <a href="#">Liên hệ</a>
+  </nav>
 </header>
 
 <!-- BANNER -->
@@ -212,6 +247,12 @@
         <p>Giảm đến 50% toàn bộ áo, quần, váy – săn ngay hàng mới</p>
         <a href="#" class="btn">MUA NGAY</a>
     </div>
+    <section class="products">
+  <div class="product">Áo thun</div>
+  <div class="product">Quần jeans</div>
+  <div class="product">Áo khoác</div>
+  <div class="product">Váy</div>
+</section>
 </section>
 <!-- DANH MỤC -->
 <h2 class="section-title">DANH MỤC SẢN PHẨM</h2>
@@ -276,4 +317,5 @@
 </body>
 
 </html>
+
 

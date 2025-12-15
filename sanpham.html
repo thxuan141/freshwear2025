@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>FRESH WEAR - Thời Trang Xanh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            color: #333;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #2e7d32;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 26px;
+        }
+
+        .tree-icon {
+            color: white;
+            font-size: 28px;
+            margin-right: 10px;
+            animation: swing 2s ease-in-out infinite;
+        }
+
+        @keyframes swing {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(6deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-6deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== BANNER ===== */
+.banner {
+    background: #e8f5e9;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;   /* ảnh trên – chữ dưới */
+    align-items: center;
+}
+
+/* ẢNH BANNER NHỎ LẠI */
+.banner-img {
+    width: 100%;
+    text-align: center;
+}
+
+.banner-img img {
+    width: 100%;              /* 👈 ảnh nhỏ hơn */
+    max-height: 260px;       /* 👈 giới hạn chiều cao */
+    object-fit: cover;       /* không méo ảnh */
+    border-radius: 12px;
+}
+
+/* CHỮ */
+.banner-text {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.banner-text h1 {
+    font-size: 38px;
+    color: #2e7d32;
+}
+
+.banner-text p {
+    margin: 12px 0;
+    font-size: 18px;
+}
+/* ===== DANH MỤC ===== */
+        .section-title {
+            text-align: center;
+             font-size: 28px;
+            margin: 20px 0 20px;
+            color: green;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .cat-item {
+            width: 140px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cat-item img {
+            width: 70%;
+            border-radius: 50%;
+            border: 3px solid #2e7d32;
+            transition: all 0.3s ease;
+        }
+
+        .cat-item p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .cat-item:hover {
+            background: #2e7d32;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        .cat-item:hover img {
+            border-color: white;
+            transform: scale(1.1);
+        }
+
+        /* ===== TUYẾT RƠI ===== */
+        @keyframes fall {
+            to {
+                transform: translateY(110vh);
+            }
+        }
+/* NÚT */
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #2e7d32;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+        /* --- 2. Main Header --- */
+.main-header {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-text);
+}
+
+/* --- 1. Header Top --- */
+.header-top {
+    background-color: var(--accent-green);
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-menu a {
+    color: #fff;
+    margin-left: 15px;
+}
+
+/* --- 2. Main Header --- */
+.main-header {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.flex-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* --- 3. Main Nav --- */
+.main-nav {
+    background-color: var(--primary-green);
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.flex-nav {
+    display: flex;
+    align-items: center;
+}
+
+.category-menu {
+    background-color: #2e7d32; /* Màu đậm hơn */
+    padding: 15px 20px;
+    font-weight: bold;
+    width: 250px; /* Độ rộng của cột danh mục */
+    text-align: center;
+    cursor: pointer;
+}
+
+.category-menu i {
+    margin-right: 10px;
+}
+
+.main-links {
+    list-style: none;
+    display: flex;
+    padding-left: 30px;
+}
+
+.main-links li a {
+    color: white;
+    padding: 15px 20px;
+    display: block;
+}
+* --- 4. Banner & Quảng cáo --- */
+.main-content-area {
+    display: flex;
+}
+
+.sidebar-category {
+    width: 250px;
+    padding-right: 20px;
+}
+
+.sidebar-category h3 {
+    padding: 10px 0;
+    font-size: 18px;
+    border-bottom: 2px solid var(--primary-green);
+    margin-bottom: 10px;
+    color: var(--primary-green);
+}
+
+.sidebar-category ul {
+    list-style: none;
+}
+
+.sidebar-category li a {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.sidebar-category li a i {
+    color: var(--accent-green);
+    margin-right: 10px;
+}
+
+.sidebar-category li a:hover {
+    color: var(--primary-green);
+}
+
+.banner-section {
+    flex-grow: 1;
+    display: grid;
+    grid-template-areas: 
+        "main-banner promo-banners"
+        "main-banner promo-banners";
+    gap: 15px;
+    grid-template-columns: 2fr 1.2fr; /* Tùy chỉnh tỉ lệ cột */
+}
+.main-banner, .promo-item {
+    background-color: var(--light-grey);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    min-height: 250px; /* Giả lập chiều cao cho banner */
+}
+
+.section-title {
+    text-align: center;
+    color: var(--dark-text);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-green);
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-green);
+}
+
+.search-box {
+    display: flex;
+    width: 40%;
+    border: 2px solid var(--primary-green);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-box button {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+        
+        .main-header {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    /* KHÔNG NÊN ĐẶT MARGIN ÂM Ở ĐÂY nếu bạn đã dùng .container lồng bên trong */
+}
+
+/* Sửa đổi .flex-header (Vùng chứa Logo và Menu con) */
+.flex-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    /* Đẩy toàn bộ nội dung trong header sang trái */
+    /* Giả sử padding-left của .container là 15px (hoặc tùy thuộc vào code của bạn) */
+    margin-left: -15px; 
+}
+
+/* Sửa đổi .logo */
+.logo {
+    /* Sau khi đẩy sang trái 15px bằng margin âm, chúng ta cần thêm padding 15px 
+       vào logo để chữ không chạm sát mép trái trình duyệt. */
+    padding-left: 15px; 
+    font-size: 20px;
+    font-weight: bold;
+    color: white; /* Giữ màu trắng theo yêu cầu trước */
+}
+.main-links {
+    list-style: none;
+    display: flex;
+    /* Giảm padding-left để menu sát lề trái hơn */
+    padding-left: 0; 
+    /* Có thể cần dùng margin-right: -15px nếu bạn muốn nhóm link này chạm sát mép phải */
+}
+
+.main-links li a {
+    color: white;
+    padding: 15px 18px; 
+    display: block;
+    font-weight: normal;
+}
+        /* LƯỚI SẢN PHẨM */
+      .product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    gap: 20px;
+    justify-content: start;
+    padding: 10px;
+}
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            margin: 10px 0 5px;
+            font-size: 16px;
+        }
+
+        .price {
+            color: #e53935;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <!-- HEADER -->
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-tree tree-icon"></i>
+        <h1>FRESH WEAR</h1>
+    </div>
+        </div>
+<header class="main-header">
+        <div class="container flex-header">
+            <div class="logo"> Thời trang xanh </div>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+</header>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="sanpham.html">Sản phẩm</a>
+        <a href="khuyenmai.html">Khuyến mãi</a>
+        <a href="lienhe.html">Liên hệ</a>
+    </nav>
+</header>
+
+<!-- BANNER -->
+<section class="banner">
+    <div class="banner-img">
+        <img src="img/bia.jpg.jpg" alt="Banner1">
+    </div>
+<!-- DANH MỤC -->
+<h2>SẢN PHẨM ĐANG BÁN CHẠY</h2>
+<div class="categories">
+    <div class="cat-item">
+        <img src="img/ao.jpg.jpg" alt="Áo">
+        <p>Áo</p>
+    </div>
+
+    <div class="cat-item">
+        <img src="img/quan.jpg" alt="Quần">
+        <p>Quần</p>
+    </div>
+
+    <div class="cat-item">
+        <img src="img/vay.jpg" alt="Váy">
+        <p>Váy</p>
+    </div>
+
+    <div class="cat-item">
+        <img src="img/tui.jpg" alt="Phụ kiện">
+        <p>Phụ kiện</p>
+    </div>
+</div>
+
+<!-- SẢN PHẨM -->
+<div class="product-list">
+    <div class="product">
+        <img src="img/aothun.jpg" alt="Áo thun">
+        <h3>Áo thun basic</h3>
+        <p class="price">120.000đ</p>
+    </div>
+
+    <div class="product">
+        <img src="img/jean.jpg" alt="Quần jean">
+        <h3>Quần jean trẻ trung</h3>
+        <p class="price">250.000đ</p>
+    </div>
+
+    <div class="product">
+        <img src="img/vay1.jpg" alt="Váy">
+        <h3>Váy nữ thời trang</h3>
+        <p class="price">180.000đ</p>
+    </div>
+
+    <div class="product">
+        <img src="img/mu.jpg" alt="Mũ">
+        <h3>Mũ lưỡi trai</h3>
+        <p class="price">90.000đ</p>
+    </div>
+    <div class="product">
+        <img src="img/aodoi.jpg" alt="Áo đôi">
+        <h3>Áo đôi nam nữ</h3>
+        <p class="price">499.000đ</p>
+    </div>
+    <div class="product">
+        <img src="img/khoac.jpg" alt="Áo khoác nam">
+        <h3>Áo khoác nam</h3>
+        <p class="price">379.000đ</p>
+    </div>
+    <div class="product">
+        <img src="img/khan.jpg" alt="Khăn len">
+        <h3>Khăn len giữ ấm</h3>
+        <p class="price">179.000đ</p>
+    </div>
+    <div class="product">
+        <img src="img/tuixach.jpg" alt="Túi xách">
+        <h3>Túi xách da</h3>
+        <p class="price">550.000đ</p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>FRESH WEAR - Thời Trang Xanh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            color: #333;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #2e7d32;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 26px;
+        }
+
+        .tree-icon {
+            color: white;
+            font-size: 28px;
+            margin-right: 10px;
+            animation: swing 2s ease-in-out infinite;
+        }
+
+        @keyframes swing {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(6deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-6deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== BANNER ===== */
+.banner {
+    background: #e8f5e9;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;   /* ảnh trên – chữ dưới */
+    align-items: center;
+}
+
+/* ẢNH BANNER NHỎ LẠI */
+.banner-img {
+    width: 100%;
+    text-align: center;
+}
+
+.banner-img img {
+    width: 100%;              /* 👈 ảnh nhỏ hơn */
+    max-height: 260px;       /* 👈 giới hạn chiều cao */
+    object-fit: cover;       /* không méo ảnh */
+    border-radius: 12px;
+}
+
+/* CHỮ */
+.banner-text {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.banner-text h1 {
+    font-size: 38px;
+    color: #2e7d32;
+}
+
+.banner-text p {
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+/* NÚT */
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #2e7d32;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+        /* ===== DANH MỤC ===== */
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin: 40px 0 20px;
+            color: #2e7d32;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .cat-item {
+            width: 140px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cat-item img {
+            width: 70%;
+            border-radius: 50%;
+            border: 3px solid #2e7d32;
+            transition: all 0.3s ease;
+        }
+
+        .cat-item p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .cat-item:hover {
+            background: #2e7d32;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        .cat-item:hover img {
+            border-color: white;
+            transform: scale(1.1);
+        }
+
+        /* ===== TUYẾT RƠI ===== */
+        @keyframes fall {
+            to {
+                transform: translateY(110vh);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-tree tree-icon"></i>
+        <h1>FRESH WEAR</h1>
+    </div>
+        </div>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="sanpham.html">Sản phẩm</a>
+        <a href="khuyenmai.html">Khuyến mãi</a>
+        <a href="lienhe.html">Liên hệ</a>
+    </nav>
+</header>
+
+<!-- BANNER -->
+<section class="banner">
+    <div class="banner-img">
+        <img src="img/bia.jpg.jpg" alt="Banner1">
+    </div>
+
+    <div class="banner-text">
+        <h1>Sale Cuối Tuần</h1>
+        <p>Giảm đến 50% toàn bộ áo, quần, váy – săn ngay hàng mới</p>
+        <a href="#" class="btn">MUA NGAY</a>
+    </div>
+</section>
+<!-- DANH MỤC -->
+<h2 class="section-title">DANH MỤC SẢN PHẨM</h2>
+
+<div class="categories">
+    <div class="cat-item">
+        <img src="img/ao.jpg.jpg" alt="Áo">
+        <p>Áo</p>
+    </div>
+
+    <div class="cat-item">
+        <img src="img/quan.jpg" alt="Quần">
+        <p>Quần</p>
+    </div>
+
+    <div class="cat-item">
+        <img src="img/vay.jpg" alt="Váy">
+        <p>Váy</p>
+    </div>
+
+    <div class="cat-item">
+        <img src="img/tui.jpg" alt="Phụ kiện">
+        <p>Phụ kiện</p>
+    </div>
+</div>
+
+<!-- TUYẾT RƠI -->
+<script>
+    const snowContainer = document.createElement("div");
+    snowContainer.style.position = "fixed";
+    snowContainer.style.top = 0;
+    snowContainer.style.left = 0;
+    snowContainer.style.width = "100%";
+    snowContainer.style.height = "100%";
+    snowContainer.style.pointerEvents = "none";
+    snowContainer.style.zIndex = "9999";
+    document.body.appendChild(snowContainer);
+
+    function createSnow() {
+        const snow = document.createElement("div");
+        snow.innerHTML = "❄";
+        snow.style.position = "absolute";
+        snow.style.color = "white";
+        snow.style.fontSize = Math.random() * 10 + 10 + "px";
+        snow.style.left = Math.random() * window.innerWidth + "px";
+        snow.style.top = "-20px";
+        snow.style.opacity = Math.random();
+        snow.style.animation = `fall ${Math.random() * 5 + 5}s linear`;
+
+        snowContainer.appendChild(snow);
+
+        setTimeout(() => snow.remove(), 10000);
+    }
+
+    const snowInterval = setInterval(createSnow, 200);
+
+    setTimeout(() => {
+        clearInterval(snowInterval);
+    }, 10000);
+</script>
+
+</body>
+</html>

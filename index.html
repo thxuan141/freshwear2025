@@ -217,17 +217,16 @@
   }
 
   .menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
 
-  .menu a {
-    padding: 10px;
-    margin: 0;
-    border-top: 1px solid rgba(255,255,255,0.3);
-    text-align: center;
-  }
+.menu a {
+  white-space: nowrap;
+  font-size: 14px;
+}
 
   .products {
     grid-template-columns: repeat(2, 1fr);
@@ -344,6 +343,7 @@
 </body>
 
 </html>
+
 
 
 

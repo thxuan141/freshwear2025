@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>FRESH WEAR - Thời Trang Xanh</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Đáp Ứng</title>
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -180,6 +181,44 @@
                 transform: translateY(110vh);
             }
         }
+        .container {
+    width: 100%; /* Chiếm toàn bộ chiều rộng trên điện thoại */
+    padding: 10px;
+    flex-direction: column; /* Trên điện thoại, xếp các item theo cột */
+}
+
+.sidebar {
+    width: 100%; /* Trên điện thoại, thanh sidebar chiếm toàn bộ */
+    order: 2; /* Đặt sidebar ở dưới cùng */
+}
+
+.main-content {
+    width: 100%;
+    order: 1;
+}
+
+/* ------------------------------------------- */
+/* 2. Media Query cho Máy tính bảng và màn hình lớn hơn (ví dụ: Chiều rộng từ 768px trở lên) */
+/* ------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 960px; /* Giới hạn chiều rộng tối đa */
+        margin: 0 auto; /* Đưa container ra giữa */
+        display: flex; /* Kích hoạt Flexbox để sắp xếp lại các item */
+        flex-direction: row; /* Trên máy tính, xếp các item theo hàng */
+    }
+
+    .sidebar {
+        width: 30%; /* Sidebar chỉ chiếm 30% trên máy tính */
+        order: 1; /* Đặt sidebar ở bên trái */
+    }
+
+    .main-content {
+        width: 70%; /* Nội dung chính chiếm 70% */
+        order: 2;
+    }
+}
     </style>
 </head>
 
@@ -275,6 +314,7 @@
 </body>
 
 </html>
+
 
 
 
